@@ -43,10 +43,10 @@ function quizBuild() {
     quiz[2] = new quizConstructor('percent of the universe is dark matter','96%', '48%', '27%', '83%', 3, 'https://66.media.tumblr.com/188ed820349f02486f8768c7011167f0/tumblr_ncol0igSYj1rnq3cto4_500.gif', false);
     quiz[3] = new quizConstructor('is the largest planet in our solar system','Saturn', 'Uranus', 'Earth', 'Jupiter', 4, 'https://i.imgur.com/Kmv7vbJ.gif', false);
     quiz[4] = new quizConstructor('is the smallest planet in our solar system','Venus', 'Mars', 'Earth', 'Mercury', 4, 'https://d2t1xqejof9utc.cloudfront.net/screenshots/pics/9dc18a44a92486b24c4ee7be1e51b959/large.gif', false);
-    quiz[5] = new quizConstructor('is the most common type of star found in the Milky Way','Venus', 'Mars', 'Red Dwarf', 'Mercury', 3, 'https://66.media.tumblr.com/47268456235e7a3a0311cdc5650249b3/tumblr_n0qp64iaev1rnq3cto1_r1_500.gif', false);
-    quiz[6] = new quizConstructor('is the largest type of star in the universe','Venus', 'Mars', 'Earth', 'Red SuperGiant', 4, 'https://66.media.tumblr.com/f2a0f042b3c49eeccdd683e80a75d43d/tumblr_n028wgH0Ft1rnq3cto1_500.gif', false);
-    quiz[7] = new quizConstructor('has a gravitational pull so strong that even light cannot escape it','Backhole', 'Mars', 'Earth', 'Mercury', 2, 'https://66.media.tumblr.com/4f9106d81234d79929ae4157b20fb917/tumblr_mlw8ozdsfJ1qdlh1io1_400.gif', false);
-    quiz[8] = new quizConstructor('is the closest star to the Sun','Venus', 'Proxima Centauri', 'Earth', 'Mercury', 2, 'https://qph.fs.quoracdn.net/main-qimg-1638e30b96a15c0ada92c01cfcdb94b6.jpg', false);
+    quiz[5] = new quizConstructor('is the most common type of star found in the Milky Way','ProtoStar', 'White Dwarf', 'Red Dwarf', 'Neutron', 3, 'https://66.media.tumblr.com/47268456235e7a3a0311cdc5650249b3/tumblr_n0qp64iaev1rnq3cto1_r1_500.gif', false);
+    quiz[6] = new quizConstructor('is the largest type of star in the universe','ProtoStar', 'Red Dwarf', 'Neutron', 'Red SuperGiant', 4, 'https://66.media.tumblr.com/f2a0f042b3c49eeccdd683e80a75d43d/tumblr_n028wgH0Ft1rnq3cto1_500.gif', false);
+    quiz[7] = new quizConstructor('has a gravitational pull so strong that even light cannot escape it','Backhole', 'Neutron', 'Nebula', 'Constellation', 1, 'https://66.media.tumblr.com/4f9106d81234d79929ae4157b20fb917/tumblr_mlw8ozdsfJ1qdlh1io1_400.gif', false);
+    quiz[8] = new quizConstructor('is the closest star to the Sun','Aldebaran', 'Proxima Centauri', 'Alpha Centauri', 'Betelguese', 2, 'https://qph.fs.quoracdn.net/main-qimg-1638e30b96a15c0ada92c01cfcdb94b6.jpg', false);
     quiz[9] = new quizConstructor('is the longest continuous time a human has spent in space','237', '537', '437', '137', 3, 'https://s3.amazonaws.com/iexplore_web/images/assets/000/006/572/original/space_travel.jpg?1443785354', false);
     
     
