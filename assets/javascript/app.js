@@ -18,7 +18,7 @@
     
     
     
-    quizBuild();        //put data into quiz constructor function to make object
+    quizBuild();        
 
     function quizElements(question,choice1,choice2,choice3,choice4,ans,imageURL,attempted){
     
@@ -35,7 +35,7 @@
     function quizBuild(){
     
      
-            quiz[0] = new quizElements('Elliptical galaxies','Spherical galaxies','Oblong galaxies','Helical galaxies','Double helix galaxies',2,"https://tenor.com/view/galaxy-universe-space-astronaut-moon-gif-13397473.gif",false);
+            quiz[0] = new quizElements('Elliptical galaxies','Spherical galaxies','Oblong galaxies','Helical galaxies','Double helix galaxies',1,"https://tenor.com/view/galaxy-universe-space-astronaut-moon-gif-13397473.gif",false);
             quiz[1] = new quizElements('The Boomerang Nebula','Eskimo Nebula','Helix Nebula','Lemon Slice Nebula','Oyster Nebula',1,'https://media2.giphy.com/media/3og0INtldac8gncQO4/giphy.gif?cid=790b76115d1acfff6c3452754d47f0d4&rid=giphy.gif',false);
             quiz[2] = new quizElements('96%','48%','27%','83%','77%',3,'https://66.media.tumblr.com/188ed820349f02486f8768c7011167f0/tumblr_ncol0igSYj1rnq3cto4_500.gif',false);
             
@@ -67,4 +67,10 @@
     
         //take this path if time expires..
         delayButtonAlert = setTimeout(notAttempted,1000)   
+    }
+
+    function countDown(){
+        Count -= 1;
+        $("#seconds-count").html('<h3> You have '+ Count + " seconds left</h3> ") 
+        return Count;
     }
