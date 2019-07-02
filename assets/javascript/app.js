@@ -36,15 +36,35 @@
     
      
             quiz[0] = new quizElements('Elliptical galaxies','Spherical galaxies','Oblong galaxies','Helical galaxies','Double helix galaxies',2,"https://tenor.com/view/galaxy-universe-space-astronaut-moon-gif-13397473.gif",false);
-            quiz[1] = new quizElements('Crows','Murder','Flutter','Omen','City',1,'https://media.giphy.com/media/VeTm2S9veYuli/giphy.gif',false);
-            quiz[2] = new quizElements('Geese','Nuisance','Parliament','Gaggle','Honk',3,'https://media.giphy.com/media/b8hm9N1bjne3S/giphy.gif',false);
-            quiz[3] = new quizElements('Mice','Click','Mischief','Nibble','World',2,'https://media.giphy.com/media/tCWMUAuZLMvKg/giphy.gif',false);
-            quiz[4] = new quizElements('Cockroaches','Immortality','Crunch','Plague','Intrusion',4,'https://media.giphy.com/media/lSwE4S5EPUHf2/giphy.gif',false);
-            quiz[5] = new quizElements('Rhinos','Rhumba','Wallop','Crash','Cluster',3,'https://media.giphy.com/media/pr7WHmW9qqG4M/giphy.gif',false);
-            quiz[6] = new quizElements('Zebras','Zeal','Line','Skinny','Zip',1,'https://media.giphy.com/media/l0HlHPUWqZ8iTXjAA/giphy.gif',false);
-            quiz[7] = new quizElements('Cats','Mob','Conspiracy','Royalty','Nuisance',4,'https://media.giphy.com/media/3o85xGRWMlHdGB1vMs/giphy.gif',false);
-            quiz[8] = new quizElements('Hedgehogs','Array','Variable','Object','Function',1,'https://media.giphy.com/media/11mVKGuLwmfAZ2/giphy.gif',false);
-            quiz[9] = new quizElements('Rattlesnakes','Coil','Rhumba','Slither','Pile',2,'https://media.giphy.com/media/kkw6txIhMqnBu/giphy.gif',false);
+            quiz[1] = new quizElements('The Boomerang Nebula','Eskimo Nebula','Helix Nebula','Lemon Slice Nebula','Oyster Nebula',1,'https://media2.giphy.com/media/3og0INtldac8gncQO4/giphy.gif?cid=790b76115d1acfff6c3452754d47f0d4&rid=giphy.gif',false);
+            quiz[2] = new quizElements('96%','48%','27%','83%','77%',3,'https://66.media.tumblr.com/188ed820349f02486f8768c7011167f0/tumblr_ncol0igSYj1rnq3cto4_500.gif',false);
+            
         
             return quiz
         }
+
+        $("#new-question").on("click",displayNewQuestion);
+    
+    function displayNewQuestion(){
+    
+        //hide the button after the first click;  new questions
+        //will automatically display with timers
+    
+        if (i > 0) {clearTimeout(newQuest);}
+    
+        $("#new-question").hide();
+        hideStuff();
+    
+        //send question and options info to screen
+    
+        ansAttempt = false;
+        console.log("New question " + i +  " will display now");
+        quizWrite();
+    
+        //Initialize count & display
+        Count = 20;
+        intervalTimer = setInterval(countDown,1000)
+    
+        //take this path if time expires..
+        delayButtonAlert = setTimeout(notAttempted,1000)   
+    }
