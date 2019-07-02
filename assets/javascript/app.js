@@ -223,6 +223,44 @@ function quizWrite(){
    
    ////////////////////////////////////////////////////////////////////////////////////
    
+   function displayStats(){
+       $(".stats").html("<h4> Correct: "+correct+'<br>'+"Incorrect: " + missed + '<br>' +"Attempted: " +attempted+ '</h4>');
+   }
    
+   
+   ////////////////////////////////////////////////////////////////////////////////////
+
+   function imageInsert(){ 
+   
+    //   console.log(quiz[i].imageURL);
+   
+       var imageChoice = $('<img>');
+       
+       imageChoice.addClass('universe');
+       
+       imageChoice.attr('src', quiz[i].imageURL);
+   
+       imageChoice.attr('width','400px');
+                         
+      return imageChoice;
+   }
+///////////////////////////////////////////////////////////////////////////////////////////
+
+function hideStuff(){
+    
+    $(".stats").hide();
+    $("#message").hide();
+    $("#picture").hide();
+    $("#Reveal").hide();
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+var fullreset=document.getElementById("fullreset");
+
+fullreset.addEventListener("click", function(){
+    location.reload();
+},false);
+
 
 }) 
