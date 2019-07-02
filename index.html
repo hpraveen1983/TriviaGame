@@ -1,23 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Trivia-Game</title>
-        <!-- Added link to the jQuery Library -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Added link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-        <!-- Added a link to Bootstrap-->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    
-        <!-- Added a link to our external stylesheet-->
-        <link rel="stylesheet" href="./assets/css/reset.css">
-        <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Added a link to Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <!-- Added a link to our external stylesheet-->
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
 
-    <h1>CHECK!</h1>
+        <script src = "assets/javascript/app.js">
+        </script>
+        <header> Space Trivia </header>
+        <div id = "seconds-count"></div>
+        <div id = "div1" class = "stats"></div>
+        <button class = "btn" id = "new-question">Start!</button>
+        
+        <div class = "container">
+            
+            <div class = "row spacer"></div>
+            <div class = "row">
+                <div class = "col align-self-center">
+                        <span class = "row justify-content-center" id = "question"> </span>
+                    <div class = "btn-group-vertical align-self-center">
+                        <button type = "button" class = "btn btn-block btn-lg answer" id = "option-1" value = "1">Choice A</button>
+                        <button type = "button" class = "btn btn-block btn-lg answer" id = "option-2" value = "2">Choice B</button>
+                        <button type = "button" class = "btn btn-block btn-lg answer" id = "option-3" value = "3">Choice C</button>
+                        <button type = "button" class = "btn btn-block btn-lg answer" id = "option-4" value = "4">Choice D</button>
+                    </div>
+                    <div id = "invis"> </div>
     
+                </div>
+                <div class="col pic">
+                    <h3 id = "message"></h3>
+                    <button class = "btn" id = "Reveal"></button> 
+                    <div id = "picture"></div>
+               </div>   
+            </div>
+     
+      
+        
+        </div>
+        <script src="./assets/javascript/app.js"></script>
 </body>
+
 </html>
