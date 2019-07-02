@@ -156,7 +156,7 @@ function displayAnsImg(){
        newQuest = setTimeout(displayNewQuestion,5000);
    }
    else {
-       $(i="#message").html("Game Over");
+       $("#message").html("Game Over");
        //$("#message").show();          //offer the option to run the game again
 
        document.getElementById("question").style.opacity = "0.0";
@@ -223,35 +223,6 @@ function quizWrite(){
    
    ////////////////////////////////////////////////////////////////////////////////////
    
-   function displayStats(){
-       $(".stats").html("<h4> Correct: "+correct+'<br>'+"Incorrect: " + missed + '<br>' +"Attempted: " +attempted+ '</h4>');
-   }
    
-   
-   ////////////////////////////////////////////////////////////////////////////////////
-
-   function imageInsert(){ 
-   
-    //   console.log(quiz[i].imageURL);
-   
-       var imageChoice = $('<img>');
-       
-       imageChoice.addClass('universe');
-       
-       imageChoice.attr('src', quiz[i].imageURL);
-   
-       imageChoice.attr('width','400px');
-                         
-      return imageChoice;
-   }
-///////////////////////////////////////////////////////////////////////////////////////////
-
-function hideStuff(){
-    
-    $(".stats").hide();
-    $("#message").hide();
-    $("#picture").hide();
-    $("#Reveal").hide();
-}
 
 }) 
