@@ -5,8 +5,6 @@ var i;
 var quiz = [];
 var Count;
 var imageChoice;
-var question;
-var ans;
 
 var correct = 0;
 var missed = 0;
@@ -148,5 +146,112 @@ function Attempted(){
     displayAnsImg();
 }
 ////////////////////////////////////////////////////////////////////////////////////
+
+function displayAnsImg(){
+    
+    //start a 5-second timer so answers will remain
+   //for 5 seconds before a new question is displayed
+
+   if (i < quiz.length){
+       newQuest = setTimeout(displayNewQuestion,5000);
+   }
+   else {
+       $(i="#message").html("Game Over");
+       //$("#message").show();          //offer the option to run the game again
+
+       document.getElementById("question").style.opacity = "0.0";
+       document.getElementById("option-1").style.opacity = "0.0";
+       document.getElementById("option-2").style.opacity = "0.0";
+       document.getElementById("option-3").style.opacity = "0.0";
+       document.getElementById("option-4").style.opacity = "0.0";
+
+       //       $("#question").hide();
+       $("#seconds-count").hide();
+       //       $(".answer").hide();
+       return;
+   }
+   
+   imageChoice = imageInsert();
+
+   $("#picture").html(imageChoice);
+   $("#Reveal").html("The correct answer is: " + quizAnswer());
+
+   $("#picture").show();
+   $("#Reveal").show();
+
+   //display the correct answer and the image
+   //increment i only AFTER displaying answer and image
+
+   i++; 
+   //console.log("Answer and image will display now");
+   
+}
+//////////////////////////////////////////////////////////////////////////////////
+
+function quizWrite(){
+    
+    //   console.log('quizWrite');
+   
+       $("#question").html("What " + quiz[i].question + " ?");
+       
+       $("#option-1").html(quiz[i].choice1);
+       $("#option-2").html(quiz[i].choice2);
+       $("#option-3").html(quiz[i].choice3);
+       $("#option-4").html(quiz[i].choice4);
+    
+   }
+
+   ////////////////////////////////////////////////////////////////////////////////
+   
+   //this function doesn't get called. I compare the
+   // value of the button to the answer instead ...
+   
+   function quizAnswer(){
+       if (quiz[i].ans == 1){
+           quizAns = quiz[i].choice1;
+       }else if (quiz[i].ans == 2){
+           quizAns = quiz[i].choice2;
+       }else if (quiz[i].ans == 3){
+           quizAns = quiz[i].choice3;
+       }if (quiz[i].ans == 4){
+           quizAns = quiz[i].choice4;
+       }
+       //console.log(quizAns);
+   
+       return quizAns;
+   }
+   
+   ////////////////////////////////////////////////////////////////////////////////////
+   
+   function displayStats(){
+       $(".stats").html("<h4> Correct: "+correct+'<br>'+"Incorrect: " + missed + '<br>' +"Attempted: " +attempted+ '</h4>');
+   }
+   
+   
+   ////////////////////////////////////////////////////////////////////////////////////
+
+   function imageInsert(){ 
+   
+    //   console.log(quiz[i].imageURL);
+   
+       var imageChoice = $('<img>');
+       
+       imageChoice.addClass('universe');
+       
+       imageChoice.attr('src', quiz[i].imageURL);
+   
+       imageChoice.attr('width','400px');
+                         
+      return imageChoice;
+   }
+///////////////////////////////////////////////////////////////////////////////////////////
+
+function hideStuff(){
+    
+    $(".stats").hide();
+    $("#message").hide();
+    $("#picture").hide();
+    $("#Reveal").hide();
+}
 
 }) 
