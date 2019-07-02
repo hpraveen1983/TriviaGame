@@ -73,6 +73,7 @@ header {
     height: 400px;
 }
 
-#fullreset {
-    right: 100px;
+p {
+    color: aliceblue;
+    text-align: center;
 }

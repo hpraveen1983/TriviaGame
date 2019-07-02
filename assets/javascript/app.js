@@ -49,6 +49,7 @@ function quizBuild() {
     quiz[8] = new quizConstructor('is the closest star to the Sun','Venus', 'Proxima Centauri', 'Earth', 'Mercury', 2, 'https://qph.fs.quoracdn.net/main-qimg-1638e30b96a15c0ada92c01cfcdb94b6.jpg', false);
     quiz[9] = new quizConstructor('is the longest continuous time a human has spent in space','237', '537', '437', '137', 3, 'https://s3.amazonaws.com/iexplore_web/images/assets/000/006/572/original/space_travel.jpg?1443785354', false);
     
+    
     return quiz;
 }
 
